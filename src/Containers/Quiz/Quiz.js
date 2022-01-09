@@ -4,6 +4,7 @@ import ActiveQuiz from '../../Components/ActiveQuiz/ActiveQuiz'
 import FinishedQuiz from '../../Components/FinishedQuiz/FinishedQuiz'
 import axios from "../../axios/axios-quiz";
 import Loader from "../../Components/UI/Loader/Loader";
+import { useParams } from "react-router-dom";
 
 
 
@@ -16,7 +17,8 @@ class Quiz extends Component {
         activeQuestion: 0,
         answerState: null,
         quiz: [],
-        loading: true
+        loading: true,
+
     }
 
 
@@ -80,11 +82,11 @@ class Quiz extends Component {
     }
 
     async componentDidMount() {
-        console.log(this.props.match.params.id)
+        console.log()
 
         try {
-            const responce = await axios.get(`/quizes/${this.props.match.params.id}.json`)
-            const quiz = responce.data
+            const response = await axios.get(`/quizes/${this.props.match.params.id}.json`)
+            const quiz = response.data
 
             this.setState({
                 quiz,
