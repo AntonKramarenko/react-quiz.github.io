@@ -22,6 +22,8 @@ class Quiz extends Component {
     }
 
 
+
+
     onAnswerClickHandler = (answerId) => {
 
         if (this.state.answerState) {
@@ -81,11 +83,13 @@ class Quiz extends Component {
         })
     }
 
+
+
     async componentDidMount() {
-        console.log()
+        const id = this.props.location.pathname.split('/')
 
         try {
-            const response = await axios.get(`/quizes/${this.props.match.params.id}.json`)
+            const response = await axios.get(`/quizes/${id[2]}.json`)
             const quiz = response.data
 
             this.setState({
