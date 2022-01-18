@@ -98,8 +98,6 @@ export default class QuizCreator extends Component {
         }
 
 
-
-
     }
 
     changeHandler = (value, controlName) => {
