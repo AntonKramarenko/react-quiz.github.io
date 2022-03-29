@@ -83,7 +83,6 @@ export default class QuizCreator extends Component {
 
     createQuizHandler = async (event) => {
         event.preventDefault()
-
         try {
             await axios.post('/quizes.json', this.state.quiz)
             this.setState({

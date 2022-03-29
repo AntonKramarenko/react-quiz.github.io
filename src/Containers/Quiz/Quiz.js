@@ -4,7 +4,7 @@ import ActiveQuiz from '../../Components/ActiveQuiz/ActiveQuiz'
 import FinishedQuiz from '../../Components/FinishedQuiz/FinishedQuiz'
 import axios from "../../axios/axios-quiz";
 import Loader from "../../Components/UI/Loader/Loader";
-import { useParams } from "react-router-dom";
+
 
 
 
@@ -20,8 +20,6 @@ class Quiz extends Component {
         loading: true,
 
     }
-
-
 
 
     onAnswerClickHandler = (answerId) => {
